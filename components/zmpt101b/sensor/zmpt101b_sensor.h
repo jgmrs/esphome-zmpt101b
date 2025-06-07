@@ -21,7 +21,7 @@ class ZMPT101BSensor : public PollingComponent, public sensor::Sensor {
   float get_setup_priority() const override { return esphome::setup_priority::HARDWARE; }
 
   void setup() override {
-    
+    this->zmpt101b->setSensitivity(DEFAULT_SENSITIVITY);
   }
 
   void update() override {
